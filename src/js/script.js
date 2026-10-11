@@ -24,26 +24,18 @@ const toggleSwitch = document.querySelector(
 );
 
 function switchTheme(e) {
+  const theme = e.target.checked ? "dark" : "light";
+
   if (e.target.checked) {
     document.documentElement.setAttribute("data-theme", "dark");
   } else {
     document.documentElement.setAttribute("data-theme", "light");
   }
+
+  localStorage.setItem("theme", theme);
 }
 
 toggleSwitch.addEventListener("change", switchTheme, false);
-
-//  Store color theme for future visits
-
-function switchTheme(e) {
-  if (e.target.checked) {
-    document.documentElement.setAttribute("data-theme", "dark");
-    localStorage.setItem("theme", "dark"); //add this
-  } else {
-    document.documentElement.setAttribute("data-theme", "light");
-    localStorage.setItem("theme", "light"); //add this
-  }
-}
 
 // Save user preference on load
 
