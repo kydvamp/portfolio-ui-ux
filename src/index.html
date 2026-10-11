@@ -99,8 +99,7 @@
           <!-- Navbar links -->
           <ul class="nav-menu">
             <li><a class="nav-link" href="#projects">PROJECTS</a></li>
-            <li><a class="nav-link" href="#">CONTACT</a></li>
-            <li><a class="nav-link" href="#">BlOG</a></li>
+            <li><a class="nav-link" href="#contact">CONTACT</a></li>
 
             <!-- Toggle switch -->
             <div class="theme-switch">
@@ -206,6 +205,30 @@
             </a>
           </div>
         </div>
+    </section>
+
+    <section id="contact" class="contact-section container">
+      <div class="contact-intro">
+        <h2>Contact Me</h2>
+        <p>For professional inquiries, collaborations, and employment opportunities.</p>
+      </div>
+
+      <form class="contact-form" action="https://formspree.io/f/mnpjzbbb" method="post" novalidate aria-describedby="contact-status">
+        <div class="form-field">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" autocomplete="name" required />
+        </div>
+        <div class="form-field">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="_replyto" autocomplete="email" required />
+        </div>
+        <div class="form-field">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+        </div>
+        <button class="contact-submit" type="submit">Submit <i class="fas fa-arrow-right"></i></button>
+        <p class="contact-status" id="contact-status" role="status" aria-live="polite"></p>
+      </form>
     </section>
 
     <footer id="footer">
