@@ -22,6 +22,29 @@ function closeMenu() {
   }
 }
 
+// Smoothly move between sections without hiding them beneath the fixed navbar.
+const internalLinks = document.querySelectorAll('a[href^="#"]:not([href="#"])');
+
+internalLinks.forEach((link) => {
+  link.addEventListener("click", (event) => {
+    const target = document.querySelector(link.getAttribute("href"));
+
+    if (!target) {
+      return;
+    }
+
+    event.preventDefault();
+    closeMenu();
+    target.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches
+        ? "auto"
+        : "smooth",
+      block: "start",
+    });
+    history.pushState(null, "", link.getAttribute("href"));
+  });
+});
+
 // Event Listeners: Handling toggle event
 const toggleSwitch = document.querySelector(
   '.theme-switch input[type="checkbox"]'

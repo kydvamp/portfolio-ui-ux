@@ -10,23 +10,31 @@
   </head>
   <body>
     <nav class="navbar">
-      <div class="container nav-inner">
-        <a class="logo" href="index.html#hero" aria-label="Back to portfolio">KA</a>
-        <ul class="nav-menu">
-          <li><a class="nav-link" href="index.html#projects">PROJECTS</a></li>
-          <li><a class="nav-link" href="index.html#footer">CONTACT</a></li>
-          <li><a class="nav-link" href="index.html">HOME</a></li>
-          <li class="theme-switch">
-            <input type="checkbox" id="switch" />
-            <label class="toggle-icons" for="switch" aria-label="Toggle dark mode">
-              <img class="moon" src="assets/moon.svg" alt="" />
-              <img class="sun" src="assets/sun.svg" alt="" />
-            </label>
-          </li>
-        </ul>
-        <button class="hamburger" type="button" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
-      </div>
-    </nav>
+        <div class="container">
+          <!-- Logo -->
+          <h1 id="logo">
+            <a href="index.html#hero"
+              ><img src="./assets/logo.png" alt="Your Logo"
+            /></a>
+          </h1>
+
+            <!-- Toggle switch -->
+            <div class="theme-switch">
+              <input type="checkbox" id="switch" />
+              <label class="toggle-icons" for="switch">
+                <img class="moon" src="assets/moon.svg" />
+                <img class="sun" src="assets/sun.svg" />
+              </label>
+            </div>
+            <!-- Hamburger menu -->
+          </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+        </div>
+      </nav>
 
     <main>
       <section class="case-hero container">
