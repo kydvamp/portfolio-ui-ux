@@ -172,6 +172,32 @@ body {
   margin: 2rem auto 8rem;
 }
 
+#projects > .content-text {
+  margin: 0 auto 2.5rem;
+  max-width: 680px;
+}
+
+#projects > .content-text h2 {
+  color: #000000;
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  position: relative;
+}
+
+#projects > .content-text h2::after {
+  background: rgb(255, 92, 190);
+  border-radius: 999px;
+  content: "";
+  display: block;
+  height: 4px;
+  margin: 1.2rem auto 0;
+  width: 48px;
+}
+
+#projects > .content-text p {
+  color: var(--text-color);
+  line-height: 1.7;
+}
+
 #projects .btn {
   align-self: center;
   margin: 2rem 0;
@@ -181,7 +207,19 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-auto-rows: minmax(250px, auto);
-  grid-gap: 0.9rem;
+  gap: 1.1rem;
+}
+
+.project .card {
+  animation: projectCardReveal 0.7s ease-out both;
+}
+
+.project .card:nth-child(2) {
+  animation-delay: 0.12s;
+}
+
+.project .card:nth-child(3) {
+  animation-delay: 0.24s;
 }
 
 .card .project-bio p {
@@ -199,7 +237,20 @@ body {
   min-height: 218px;
   opacity: 0;
   position: relative;
+  transform: translateY(12px);
   transition: 0.5s ease-in-out;
+  z-index: 1;
+}
+
+.project-link {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+.project-link a {
+  margin-right: 0;
 }
 
 .project-bio {
@@ -221,14 +272,14 @@ body {
   right: 10px;
   background-color: rgb(255, 92, 190);
   color: #ffffff !important;
-  font-size: 0.75rem !important;
+  font-size: 0.82rem !important;
   font-weight: 600;
-  padding: 0.45rem 0.9rem;
-  border-radius: 20px;
+  padding: 0.35rem 0.65rem;
+  border-radius: 6px;
   display: inline-flex;
   align-items: center;
-  gap: 0.4rem;
-  box-shadow: 0 0 10px rgba(255, 92, 190, 0.75), 0 0 24px rgba(255, 92, 190, 0.45);
+  gap: 0;
+  box-shadow: none;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
   z-index: 2;
@@ -244,6 +295,27 @@ body {
   color: rgb(255, 92, 190) !important;
   box-shadow: 0 0 14px rgba(255, 255, 255, 0.95), 0 0 30px rgba(255, 92, 190, 0.8);
   transform: translateY(-2px);
+}
+
+@keyframes projectCardReveal {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .project .card,
+  .project-info {
+    animation: none;
+    transform: none;
+    transition: none;
+  }
 }
 
 /* Contact */
@@ -408,7 +480,8 @@ body {
 [data-theme="dark"] .contact-intro > p:last-child,
 [data-theme="dark"] .form-field label,
 [data-theme="dark"] .form-field input,
-[data-theme="dark"] .form-field textarea {
+[data-theme="dark"] .form-field textarea,
+[data-theme="dark"] #projects > .content-text h2 {
   color: #ffffff;
 }
 
