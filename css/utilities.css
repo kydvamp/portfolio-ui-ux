@@ -268,17 +268,17 @@ h2::selection {
 
 /* project 1 */
 .card:nth-child(1) {
-  background: url(../assets/project/proj-image-1.png) center center/cover;
+  background: url(project/proj-image-1.png) center center/cover;
 }
 
 /* UtangGo */
 .card:nth-child(2) {
-  background: url(../assets/project/proj-image-2.png) center center/cover;
+  background: url(project/proj-image-2.png) center center/cover;
 }
 
 /* Project 3 */
 .card:nth-child(3) {
-  background: url(../assets/project/proj-image-3.jpg) center center/cover;
+  background: url(project/proj-image-3.png) center center/cover;
 }
 
 /* Media Queries */
