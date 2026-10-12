@@ -3,64 +3,164 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>UtangGo | Case Study</title>
-    <meta name="description" content="Case study for UtangGo, a simple experience for making personal debt easier to understand." />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" />
+    <title>UtangGo Case Study</title>
+
+    <!-- 1. This connects your Font Awesome icons (like the moon/sun) -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+      crossorigin="anonymous"
+    />
+
+    <!-- 2. This connects your main styles (if you share styles) -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- 3. THIS IS THE MOST IMPORTANT ONE: It connects this specific case study's CSS -->
     <link rel="stylesheet" href="css/case-study-utang-go.css" />
   </head>
   <body>
+    <!-- Navbar -->
     <nav class="navbar">
-        <div class="container">
-          <!-- Logo -->
-          <h1 id="logo">
-            <a href="index.html#hero"
-              ><img src="./assets/logo.png" alt="Your Logo"
-            /></a>
-          </h1>
-
-            <!-- Toggle switch -->
-            <div class="theme-switch">
-              <input type="checkbox" id="switch" />
-              <label class="toggle-icons" for="switch">
-                <img class="moon" src="assets/moon.svg" />
-                <img class="sun" src="assets/sun.svg" />
-              </label>
-            </div>
-            <!-- Hamburger menu -->
-          </ul>
-          <div class="hamburger">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
+      <div class="container">
+        <!-- Logo (Fixed to include both ID and Class) -->
+        <h1 id="logo" class="logo">
+          <a href="index.html#hero">
+            <img src="./assets/logo.png" alt="Your Logo" />
+          </a>
+        </h1>
+        
+        <!-- Toggle switch -->
+        <div class="theme-switch">
+          <input type="checkbox" id="switch" />
+          <label class="toggle-icons" for="switch">
+            <img class="moon" src="assets/moon.svg" alt="Moon" />
+            <img class="sun" src="assets/sun.svg" alt="Sun" />
+          </label>
         </div>
-      </nav>
+        
+        <!-- Hamburger menu -->
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </div>
+    </nav>
 
     <main>
+      <!-- Hero Section -->
       <section class="case-hero container">
-        <a class="back-link" href="index.html#projects"><i class="fas fa-arrow-left"></i> Back to projects</a>
-        <p class="eyebrow">Case study / 02</p>
+        <a href="index.html#projects" class="back-link">
+          <i class="fas fa-arrow-left"></i> Back to projects
+        </a>
+        
+        <p class="eyebrow">Case Study / 02</p>
         <h1>UtangGo</h1>
-        <p class="lede">A straightforward money companion that makes shared debts and repayment plans easier to track.</p>
-        <img class="hero-image" src="assets/project/proj-image-2.png" alt="UtangGo project interface" />
+        <p class="lede">
+          A conceptual financial tracking web app designed to help users easily record, manage, and settle personal debts (utang) with friends and family in a seamless interface.
+        </p>
+        
+        <!-- Placeholder for hero image -->
+        <img class="hero-image" src="assets/project/proj-image-2.png" alt="UtangGo app mockup"/>
+        
         <a class="prototype-btn" href="https://www.figma.com/" target="_blank" rel="noopener noreferrer">View Figma Prototype <i class="fas fa-external-link-alt"></i></a>
       </section>
 
       <section class="case-content container">
-        <div class="intro-grid">
-          <div><p class="eyebrow">Overview</p><h2>Turning awkward money conversations into clear actions.</h2></div>
-          <p>UtangGo is a finance concept focused on everyday borrowing between friends and family. It gives people a private, low-friction way to record what is owed, understand due dates, and keep agreements visible.</p>
-        </div>
+        <!-- Project Details Grid -->
         <div class="detail-grid">
-          <article><p class="eyebrow">Role</p><p>UI/UX Designer<br />Front-End Developer</p></article>
-          <article><p class="eyebrow">Tools</p><p>Figma<br />HTML, CSS, JavaScript</p></article>
-          <article><p class="eyebrow">Focus</p><p>Trust and clarity<br />Mobile-first flow</p></article>
+          <article>
+            <p class="eyebrow">Role</p>
+            <p>UI/UX Designer<br>Front-End Developer</p>
+          </article>
+          <article>
+            <p class="eyebrow">Timeline</p>
+            <p>4 Weeks</p>
+          </article>
+          <article>
+            <p class="eyebrow">Tools</p>
+            <p>Figma, HTML, CSS, JavaScript</p>
+          </article>
         </div>
-        <div class="story-block"><p class="eyebrow">Design direction</p><h2>Quiet guidance for a sensitive subject.</h2><p>The visual system uses direct labels, readable numbers, and gentle reminders to make financial information feel manageable. Every screen is built around one clear decision at a time.</p></div>
+
+        <!-- Overview -->
+        <div class="intro-grid">
+          <h2>The Problem</h2>
+          <p>
+            Keeping track of borrowed money among friends and family often relies on mental notes or scattered chat messages. This leads to forgotten debts, awkward conversations, and strained relationships. There needed to be a frictionless way to record and track these informal micro-loans.
+          </p>
+        </div>
+
+        <!-- Story Block 1 -->
+        <div class="story-block">
+          <h2>The Solution</h2>
+          <p>
+            UtangGo centralizes debt tracking by allowing users to quickly log who borrowed what, set gentle automated reminders, and view a simplified dashboard of their total balance (owed vs. owing). The focus was on creating a non-intimidating, friendly interface that removes the stigma of asking for your money back.
+          </p>
+        </div>
+
+        <!-- Features -->
+        <div class="feature-section">
+          <h2>Key Features</h2>
+          <div class="feature-list">
+            <div class="feature-item">
+              <span>01</span>
+              <div>
+                <h3>Quick Ledger Entry</h3>
+                <p>A streamlined form to instantly add a new transaction, specifying the person, amount, and a brief note on what the transaction was for.</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span>02</span>
+              <div>
+                <h3>Net Balance Dashboard</h3>
+                <p>A clear, visual representation of your financial standing, immediately showing whether you are currently in the green (people owe you) or red (you owe people).</p>
+              </div>
+            </div>
+            <div class="feature-item">
+              <span>03</span>
+              <div>
+                <h3>Gentle Nudges</h3>
+                <p>Pre-written, polite reminder templates that can be copied or shared directly to messaging apps to take the awkwardness out of following up.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Story Block 2 / Reflection -->
+        <div class="story-block reflection-block">
+          <h2>Reflections & Learnings</h2>
+          <p>
+            Building UtangGo reinforced the importance of emotional design in financial tools. Because money can be a sensitive topic, the UI needed to feel light and accessible. From a technical standpoint, managing the DOM dynamically with JavaScript to update the ledger in real-time was a great exercise in state management.
+          </p>
+        </div>
       </section>
     </main>
 
-    <footer id="footer"><div class="container"><a href="mailto:kurtneyorfianoagullano@gmail.com">kurtneyorfianoagullano@gmail.com</a><div class="social"><a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a><a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a><a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a></div><p>&copy; <span id="datee"></span> Kurtney Agullano. All rights reserved.</p></div></footer>
+    <!-- Footer -->
+    <footer id="footer">
+      <div class="container">
+        <a href="mailto:communitypro47@gmail.com">kurtneyorfianoagullano@gmail.com</a>
+        <!-- Social links -->
+  
+<div class="social">
+  <a href="https://www.linkedin.com/in/kurtney-agullano-b740a7323/" target="_blank">
+    <img src="./assets/linkedin-icon.svg" alt="LinkedIn" />
+  </a>
+
+  <a href="https://github.com/kydvamp" target="_blank">
+    <img src="./assets/github-icon.svg" alt="GitHub" />
+  </a>
+
+  <a href="https://www.instagram.com/kurtnyagullano/" target="_blank">
+    <img src="./assets/instagram-icon.png" alt="Instagram" />
+  </a>
+</div>
+
+        
+        <p>© 2026 Kurtney Agullano. All rights reserved.
+      </div>
+    </footer>
     <script src="js/script.js"></script>
   </body>
 </html>
