@@ -1,3 +1,8 @@
+
+/* ========================================
+   KAYA AI CASE STUDY
+   ======================================== */
+
 :root {
   --pink: #ff5cbe;
   --ink: #222222;
@@ -76,8 +81,7 @@
   font-size: 0.9rem;
 }
 
-/* Hamburger — matches the shared main-page CSS */
-
+/* Hamburger */
 .hamburger {
   margin-bottom: 0.1rem;
   display: none;
@@ -94,7 +98,6 @@
 }
 
 /* Hide the actual checkbox */
-
 .navbar .theme-switch input[type="checkbox"] {
   display: none !important;
 }
@@ -199,9 +202,10 @@
   font-size: 0.95rem;
   font-weight: 800;
   text-decoration: none;
-  transition: background 0.25s ease,
-              box-shadow 0.25s ease,
-              transform 0.25s ease;
+  transition:
+    background 0.25s ease,
+    box-shadow 0.25s ease,
+    transform 0.25s ease;
 }
 
 .prototype-btn:hover {
@@ -272,7 +276,6 @@
 }
 
 /* Story sections */
-
 .story-block {
   max-width: 800px;
   margin: 0 auto;
@@ -292,7 +295,6 @@
 }
 
 /* Feature section */
-
 .feature-section {
   max-width: none;
   padding: 4rem;
@@ -337,7 +339,6 @@
 }
 
 /* Reflection section */
-
 .reflection-block {
   padding-bottom: 2rem;
 }
@@ -369,8 +370,7 @@
   opacity: 0.6;
 }
 
-/* Social icons */
-
+/* Social icons: 20 × 20 px */
 #footer .social {
   display: flex;
   align-items: center;
@@ -448,24 +448,6 @@
 
   .navbar .hamburger {
     display: block;
-    cursor: pointer;
-  }
-
-  /* Keep hamburger as three lines, not an X */
-  .navbar .hamburger.active {
-    border: none;
-  }
-
-  .navbar .hamburger.active .bar:nth-child(1),
-  .navbar .hamburger.active .bar:nth-child(2),
-  .navbar .hamburger.active .bar:nth-child(3) {
-    opacity: 1;
-    transform: none;
-  }
-
-  /* Mobile navigation menu */
-  .navbar .nav-menu.active {
-    right: 20px;
   }
 
   .case-hero {
@@ -519,59 +501,13 @@
 }
 
 /* ========================================
-   BLACK DARK MODE
+   DARK MODE
    ======================================== */
 
-html[data-theme="dark"] {
-  --bg-primary: #000000;
-  --text-color: #f5f5f5;
-  --text-color-two: #ffffff;
-  --bg-secondary: #ffffff;
-  --card-background: #111111;
-  --bg-secondary-two: #000000;
-  --muted: #a0a0a0;
-  --line: #292929;
-  --border-color: #292929;
-  --background-color: #111111;
-}
-
-html[data-theme="dark"] body {
-  background-color: #000000;
-  color: #f5f5f5;
-}
-
-html[data-theme="dark"] .navbar,
-html[data-theme="dark"] .navbar .nav-menu {
-  background-color: #000000;
-}
-
-html[data-theme="dark"] .navbar .nav-link,
-html[data-theme="dark"] .case-content h2,
-html[data-theme="dark"] .case-content h3,
-html[data-theme="dark"] .case-content p {
-  color: #f5f5f5;
-}
-
-html[data-theme="dark"] .eyebrow {
+body.dark .eyebrow {
   color: #ff83d0;
 }
 
-html[data-theme="dark"] .feature-section,
-html[data-theme="dark"] .feature-item {
-  background-color: #111111;
-}
-
-html[data-theme="dark"] .feature-item {
-  border-color: #292929;
-}
-
-html[data-theme="dark"] .intro-grid,
-html[data-theme="dark"] .detail-grid {
-  border-color: #292929;
-}
-
-/* Keep hamburger bars visible on the black navbar */
-
-html[data-theme="dark"] .navbar .hamburger .bar {
-  background-color: #ffffff;
+body.dark .feature-item {
+  background: var(--card-background);
 }
