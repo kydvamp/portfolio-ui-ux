@@ -104,13 +104,9 @@ body {
   font-weight: var(--weight-semibold);
 }
 
-.navbar .theme-switch {
-  margin-left: 1rem;
-}
-
 .navbar #logo img {
   display: block;
-  width: 60px;
+  width: 40px;
 }
 
 .navbar .btn {
@@ -601,6 +597,7 @@ body {
     align-items: flex-start;
   }
 
+  /* Navbar */
   .navbar .btn {
     margin: 0;
     margin-top: 1rem;
